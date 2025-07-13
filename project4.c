@@ -1,25 +1,44 @@
-//write a program that determines the largest of three numbers by using nested if else loop.
 #include <stdio.h>
 
 int main(){
-    int a, b, c;
+    int Mp, Mc, Mm;
+    char name[100];
+    int Rn;
+    int p, c, m;
 
-    //get the values
-    printf("Enter the value of a: ");
-    scanf("%d", &a);
-    printf("Enter the value of b: ");
-    scanf("%d", &b);
-    printf("Enter the value of c: ");
+    printf("Enter your role number: ");
+    scanf("%d", &Rn);
+    printf("Enter your name: ");
+    scanf("%[^\n]", &name);
+
+
+    printf("Enter the marks of physics: ");
+    scanf("%d", &p);
+    printf("Enter the marks of chemistry: ");
     scanf("%d", &c);
+    printf("Enter the marks of mathematics: ");
+    scanf("%d", &m);
 
-    //nested if else loop.
-    if(a > b && a > c){
-        printf("a is larger than b and c.");
-    }else if(b > c && b > a){
-        printf("b is greater than a and c.");
-    }else if(c > a && c > b){
-        printf("c is greater than a and b");
+    printf("\n \t -: Student profie and Eligibilty :-");
+    printf("\n \t __________________________________");
+    printf("\n Roll number     Name     DOB     Mobile");
+    printf("\n \t %d", Rn);
+    printf("\t \t %s", name);
+    printf("\t Dob");
+    printf("\t 1234567890");
+    printf("\n _____________________________________________");
+    printf("\n S.N.     Subject     Marks");
+    printf("\n 1.)      Physics       %d", p);
+    printf("\n 2.)     Chemistry      %d", c);
+    printf("\n 3.)    Mathematics     %d", m);
+    printf("\n ______________________________________________");
+
+    if( p < 40 && c < 50 && m < 60 && (p + m) < 150 && (p + c + m) < 200){
+        printf("\n Sorry! You are not eligible for the program.");
+    }else{
+        printf("\n congrats! You are eligible for programe");
     }
+
 
     return 0;
 }
